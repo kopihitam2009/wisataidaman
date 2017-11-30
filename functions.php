@@ -112,3 +112,4 @@ function superiorities() {
 add_action( 'init', 'superiorities' );
 
 require_once get_template_directory() . '/theme-options.php';
+require_once get_template_directory() . '/wp_adminnav.php';
