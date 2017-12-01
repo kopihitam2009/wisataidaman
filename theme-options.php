@@ -35,15 +35,15 @@ function wisataidaman_setting_page(){
             <div class="card-body">
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Umroh</label>
+                <label for="exampleInputEmail1">Category Umroh</label>
                 <?php wp_dropdown_categories("name=umroh&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('wisataidaman_umroh')); ?>
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">Overseas</label>
+                <label for="exampleInputEmail1">Category Overseas</label>
                 <?php wp_dropdown_categories("name=overseas&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('wisataidaman_overseas')); ?>
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">Umroh</label>
+                <label for="exampleInputEmail1">Category Tour</label>
                 <?php wp_dropdown_categories("name=tour&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('wisataidaman_tour')); ?>
               </div>
               <div class="form-group">
