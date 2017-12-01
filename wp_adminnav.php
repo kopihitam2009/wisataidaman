@@ -21,6 +21,7 @@ function archiprada_menu() {
   remove_menu_page( 'plugins.php' );
   remove_menu_page( 'users.php' );
   remove_menu_page( 'tools.php' );
+  remove_menu_page( 'acf' );
 
   remove_submenu_page( 'index.php', 'update-core.php' );
   remove_submenu_page( 'themes.php', 'themes.php' );
