@@ -1,10 +1,11 @@
 <?php get_header(); ?>
-
-<div class="page-wrapper">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/header-page.jpg" />
+<div class="container-fluid pl-0 pr-0">
+  <div class="page-wrapper">
+      <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/header-page.jpg" />
+  </div>
 </div>
 
-<div class="container content-page">
+<div class="container content">
   <?php $cat = get_queried_object(); ?>
   <?php $arg = new WP_Query( array( 'post_type' => 'programs', 'cat' => get_cat_ID($cat->cat_name), 'order' => 'asc' ) ); ?>
   <?php if ( $arg->have_posts() ) : ?>

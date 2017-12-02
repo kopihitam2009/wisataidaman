@@ -35,18 +35,7 @@ get_header(); ?>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-        <?php $f = 1;
-        while($f <= 31) { ?>
-          <?php if(get_field('itinerary_' . $f)) : ?>
-            <div class="card" style="margin-bottom:5px;">
-              <div class="card-header"><?php echo get_field('itinerary_' . $f); ?></div>
-              <div class="card-body">
-                <p class="card-text"><?php echo get_field('itinerary_body_' . $f); ?></p>
-              </div>
-            </div>
-          <?php endif; ?>
-          <?php $f++ ?>
-        <?php } ?>
+        <?php echo get_field('itinerary_body' . $f); ?>
 
       </div>
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">

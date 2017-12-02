@@ -3,12 +3,14 @@
  * The main template file
  */
  get_header(); ?>
-     <div class="slider">
-     <?php $banners = new WP_Query( array( 'post_type' => 'banner', 'meta_key' => 'order', 'orderby' => 'meta_value', 'order' => 'ASC' ) );
-      while ( $banners->have_posts() ) : $banners->the_post(); ?>
-        <div id="slide1"><img src="<?php the_field('image'); ?>" /></div>
-      <?php endwhile; ?>
+    <div class="container-fluid pl-0 pr-0">
+      <div class="slider">
+        <?php $banners = new WP_Query( array( 'post_type' => 'banner', 'meta_key' => 'order', 'orderby' => 'meta_value', 'order' => 'ASC' ) );
+        while ( $banners->have_posts() ) : $banners->the_post(); ?>
+          <div id="slide<?php the_ID(); ?>"><img src="<?php the_field('image'); ?>" /></div>
+        <?php endwhile; ?>
       </div>
+    </div>
 
      <div class="container home">
        <div class="row">
