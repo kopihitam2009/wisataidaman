@@ -51,14 +51,14 @@ add_action( 'wp_head', 'wisataidaman_javascript_detection', 0 );
 
 function wisataidaman_scripts() {
 	wp_enqueue_style( 'wisataidaman-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'wisataidaman-platform', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' );
+	wp_enqueue_style( 'wisataidaman-platform', get_template_directory_uri() . '/css/bootstrap.css' );
 	wp_enqueue_style( 'wisataidaman-fontawsome', get_template_directory_uri() . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'wisataidaman-theme', get_template_directory_uri() . '/css/theme.css' );
 
-	wp_enqueue_script( 'wisataidaman-jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js',array(),'0', true );
-	wp_enqueue_script( 'wisataidaman-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js',array(),'0', true );
-	wp_enqueue_script( 'wisataidaman-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js',array(),'0', true );
-	wp_enqueue_script( 'wisataidaman-bxslider', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js',array(),'0', true );
+	wp_enqueue_script( 'wisataidaman-jquery', get_template_directory_uri() . '/js/jquery.js', array(),'0', true );
+	wp_enqueue_script( 'wisataidaman-popper', get_template_directory_uri() . '/js/proper.js', array(),'0', true );
+	wp_enqueue_script( 'wisataidaman-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array(),'0', true );
+	wp_enqueue_script( 'wisataidaman-bxslider', get_template_directory_uri() . '/js/bxlider.js', array(),'0', true );
 	wp_enqueue_script( 'wisataidaman-scripts', get_template_directory_uri() . '/js/function.js',array(),'0', true );
 }
 add_action( 'wp_enqueue_scripts', 'wisataidaman_scripts' );
