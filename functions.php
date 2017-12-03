@@ -23,10 +23,6 @@ function wisataidaman_setup() {
 		'search-form','comment-form','comment-list','gallery','caption',
 	) );
 
-	//add_theme_support( 'post-formats', array(
-		//'aside','image','video','quote','link','gallery','status','audio','chat',
-	//) );
-
 }
 endif;
 add_action( 'after_setup_theme', 'wisataidaman_setup' );
@@ -89,7 +85,6 @@ function programs() {
 	  'description' => 'Program',
 	  'public' => true,
 		'has_archive' => true,
-		//'rewrite' => array( 'slug' => 'programs' ),
 	  'menu_position' => 20,
 	  'supports' => array( 'title' ),
 		'taxonomies' => array( 'category' ),
