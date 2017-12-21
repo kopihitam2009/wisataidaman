@@ -12,7 +12,7 @@ add_action( 'admin_menu', 'wisataidaman_setting_theme_page' );
 
 function register_wisataidaman_settings() {
   if ( count($_POST) > 0 && isset($_POST['wisataidaman_theme_settings']) ) {
-		$options = array ('umroh', 'overseas', 'tour', 'cpname', 'email', 'phone', 'mobile', 'facebook', 'fb_link', 'linkedin', 'li_link', 'googleplus', 'gp_link', 'instagram', 'ig_link', 'youtube', 'yt_link', 'twitter', 'tw_link');
+		$options = array ('umroh', 'overseas', 'tour', 'cpname', 'email', 'phone', 'mobile', 'facebook', 'fb_link', 'linkedin', 'li_link', 'googleplus', 'gp_link', 'instagram', 'ig_link', 'youtube', 'yt_link', 'twitter', 'tw_link', 'ppp');
 		foreach ( $options as $opt ) {
 			delete_option ( 'wisataidaman_'.$opt, $_POST[$opt] );
 			add_option ( 'wisataidaman_'.$opt, $_POST[$opt] );
@@ -97,6 +97,11 @@ function wisataidaman_setting_page(){
                 <input type="text" name="twitter" id="twitter" value="<?php echo get_option('wisataidaman_twitter'); ?>" class="form-control">
                 <label for="exampleInputEmail1">Link</label>
                 <input type="text" name="tw_link" id="tw_link" value="<?php echo get_option('wisataidaman_tw_link'); ?>" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Post per page <strong>Home</strong></label>
+                <input type="text" name="ppp" id="ppp" value="<?php echo get_option('wisataidaman_ppp'); ?>" class="form-control">
               </div>
             </div>
           </div>
