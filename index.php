@@ -15,7 +15,7 @@
      <div class="container home">
        <div class="row">
 
-         <?php $umroh = new WP_Query( array( 'post_type' => 'programs', 'posts_per_page' => 2, 'cat' => get_option('wisataidaman_umroh'), 'order' => 'asc' ) ); ?>
+         <?php $umroh = new WP_Query( array( 'post_type' => 'programs', 'posts_per_page' => 3, 'cat' => get_option('wisataidaman_umroh'), 'order' => 'asc' ) ); ?>
          <div class="col-md-4">
            <img class="img-fluid mx-auto d-block" width="20%" style="margin-bottom:30px;" src="<?php echo get_template_directory_uri(); ?>/images/icon-umroh.jpg" />
            <ul class="program">
@@ -32,7 +32,7 @@
            </ul>
          </div>
 
-         <?php $over = new WP_Query( array( 'post_type' => 'programs', 'posts_per_page' => 2, 'cat' => get_option('wisataidaman_overseas'), 'order' => 'asc' ) ); ?>
+         <?php $over = new WP_Query( array( 'post_type' => 'programs', 'posts_per_page' => 3, 'cat' => get_option('wisataidaman_overseas'), 'order' => 'asc' ) ); ?>
          <div class="col-md-4">
            <img class="img-fluid mx-auto d-block" width="20%" style="margin-bottom:30px;" src="<?php echo get_template_directory_uri(); ?>/images/icon-overseas.jpg" />
            <ul class="program">
@@ -49,7 +49,7 @@
            </ul>
          </div>
 
-         <?php $tour = new WP_Query( array( 'post_type' => 'programs', 'posts_per_page' => 2, 'cat' => get_option('wisataidaman_tour'), 'order' => 'asc' ) ); ?>
+         <?php $tour = new WP_Query( array( 'post_type' => 'programs', 'posts_per_page' => 3, 'cat' => get_option('wisataidaman_tour'), 'order' => 'asc' ) ); ?>
          <div class="col-md-4">
            <img class="img-fluid mx-auto d-block" width="20%" style="margin-bottom:30px;" src="<?php echo get_template_directory_uri(); ?>/images/icon-tour.jpg" />
            <ul class="program">
