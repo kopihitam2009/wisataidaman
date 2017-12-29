@@ -261,12 +261,19 @@ ul.bxslider {
   margin-top: 10px;
 }
 
+.bg-why {
+  background: url("../images/bg-why.jpg") 50% center no-repeat;
+  background-color: #f5f7f9;
+}
+
 .bottom-content {
-  margin: 15px 0 0 0;
-  padding: 40px 0 20px 0;
   color: #fff;
   font-size: 90%;
   background: #43449b;
+}
+
+.testimoni {
+  background-color: #e9ebf1;
 }
 
 .footer {
@@ -297,7 +304,7 @@ ul.bxslider {
   color: #fff;
 }
 
-hr {
+hr.w {
   border-top: 1px solid rgba(255,255,255,.1);
 }
 
@@ -327,4 +334,123 @@ hr {
 
 .card-img-overlay {
   padding-bottom: .25rem;
+}
+
+.card-program{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+
+.title-program {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.lp-program {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  margin-top: 6px;
+}
+
+.add-info {
+  color: #666;
+}
+
+.card {
+    border: 0;
+    border-radius: 0;
+    background-color: #f8f8f8;
+}
+
+.card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.media {
+    background: #fff;
+    color: #3e3e3e;
+    padding-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: .2rem;
+}
+
+.media p {
+  font-size: 12px;
+}
+
+.thumb {
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+.shadow {
+  -webkit-box-shadow: 2px 2px 8px -4px rgba(0,0,0,0.3);
+  -moz-box-shadow: 2px 2px 8px -4px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 8px -4px rgba(0,0,0,0.3);
+}
+
+.pt-link,
+.pt-link:hover {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.text-footer {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.blog {
+  background: transparent;
+  color: #fff;
+}
+
+.blog a {
+  color: #eaeaea;
+  font-style: italic;
+}
+
+.blog-thumb {
+  border-radius: 5px;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer li {
+  display: block;
+  margin: 0 5px;
+  float: left;
+}
+
+.footer li:first-child {
+  margin-left: 0;
+}
+
+.footer h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer p,
+.footer table,
+.footer a {
+  font-size: 12px;
+}
+
+.social-media a {
+  display: block;
+  padding: 5px 9px 5px 10px;
+  background-color: #4649a6;
+  font-size: 14px;
+  color: #fff;
 }

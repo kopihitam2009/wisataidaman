@@ -21,17 +21,21 @@
              <span class="navbar-toggler-icon"></span>
            </button>
 
-           <?php wp_nav_menu( array(
-             menu_class => 'navbar-nav ml-auto',
-             container => 'div',
-             container_class => 'collapse navbar-collapse',
-             container_id => 'navbarSupportedContent',
-             fallback_cb => 'WP_Bootstrap_Navwalker::fallback',
-             depth => 2,
-             walker => new WP_Bootstrap_Navwalker(),
-             theme_location => 'primary',
-             items_wrap => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-           ) ); ?>
+           <?php if ( has_nav_menu( 'primary' ) ) : ?>
+             <?php wp_nav_menu( array(
+               menu_class => 'navbar-nav ml-auto',
+               container => 'div',
+               container_class => 'collapse navbar-collapse',
+               container_id => 'navbarSupportedContent',
+               fallback_cb => 'WP_Bootstrap_Navwalker::fallback',
+               depth => 2,
+               walker => new WP_Bootstrap_Navwalker(),
+               theme_location => 'primary',
+               items_wrap => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+             ) ); ?>
+           <?php else : ?>
+             <h5>Goto Appearrance -> Menu to set this menu</h5>
+           <?php endif; ?>
         </div>
        </nav>
      </div>

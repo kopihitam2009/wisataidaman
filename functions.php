@@ -106,5 +106,21 @@ function superiorities() {
 }
 add_action( 'init', 'superiorities' );
 
+function testimonies() {
+	register_post_type( 'testimonies', array(
+	  'labels' => array(
+	    'name' => 'Testimonies',
+	    'singular_name' => 'Testimoni',
+	   ),
+	  'description' => 'Testimoni',
+	  'public' => true,
+		'has_archive' => true,
+	  'menu_position' => 20,
+	  'supports' => array( 'title' ),
+		'taxonomies' => array( 'category' ),
+	));
+}
+add_action( 'init', 'testimonies' );
+
 require_once get_template_directory() . '/theme-options.php';
 require_once get_template_directory() . '/wp_adminnav.php';
