@@ -1,24 +1,35 @@
 <?php get_header(); ?>
-<div class="container-fluid pl-0 pr-0">
-  <div class="page-wrapper">
-      <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/header-page.jpg" />
+
+<?php $cat = get_queried_object(); ?>
+
+<div class="container-fluid page-wrapper pt-5 pb-4 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mb-4"><?php echo $cat->cat_name ?></h2>
+    </div>
   </div>
 </div>
 
-<div class="container content">
-  <?php $cat = get_queried_object(); ?>
+<div class="container-fluid">
   <?php $arg = new WP_Query( array( 'post_type' => 'programs', 'cat' => get_cat_ID($cat->cat_name), 'order' => 'asc' ) ); ?>
   <?php if ( $arg->have_posts() ) : ?>
-    <div class="row">
+    <div class="row" style="padding:0 5px 0 5px;">
       <?php while ( $arg->have_posts() ) : $arg->the_post(); ?>
-        <div class="col-md-4 mb-3">
-          <div class="card">
+
+        <div class="col-md-4 card-program">
+          <div class="card shadow">
             <a href="<?php the_permalink();?>"><img class="card-img-top" src="<?php the_field('thumbnail'); ?>" alt="image" /></a>
             <div class="card-body">
-              <span><?php the_field('lowest_price'); ?> | <i class="fa fa-plane" aria-hidden="true"></i> <?php the_field('flight'); ?></span>
+              <div class="d-flex justify-content-between">
+                <div class="title-program"><?php the_title(); ?></div>
+                <div class="lp-program"><?php the_field('lowest_price'); ?></div>
+             </div>
+              <span class="add-info"><?php the_field('duration'); ?> | <i class="fa fa-plane" aria-hidden="true"></i> <?php the_field('flight'); ?></span>
             </div>
           </div>
-        </div>
+         </div>
+
+
       <?php endwhile; ?>
     </div>
   <?php endif; ?>
