@@ -8,15 +8,25 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div class="page-wrapper pt-5 pb-4">
-  <?php /*if(get_field('page_banner')) : ?>
-    <img src="<?php the_field('page_banner'); ?>" />
-  <?php else : ?>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/header-default.jpg" />
-  <?php endif; */ ?>
-  <h2 class="text-center mb-4"><?php the_title(); ?></h2>
-</div>
-<div class="container-fluid mb-4 pt-4 pb-3 info-bar">
+<?php if(get_field('page_banner')) : ?>
+  <div class="container-fluid pl-0 pr-0" style="background: url('<?php the_field('page_banner'); ?>') top center no-repeat;height:300px;">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center title-program-with-images"><?php the_title(); ?></h2>
+      </div>
+    </div>
+  </div>
+<?php else : ?>
+  <div class="container-fluid page-wrapper pt-5 pb-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mb-4"><?php the_title(); ?></h2>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
+
+<div class="container-fluid mb-4 pt-3 pb-3 info-bar">
   <div class="row">
     <div class="col-md-3 border-right">
       <?php if(get_field('depature')) : ?>
@@ -49,11 +59,13 @@ get_header(); ?>
   </div>
 </div>
 
-<div class="container content text-page">
+<div class="container content">
 
   <div class="row">
-    <div class="col-md-12">
-      <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-bottom:10px;">
+    <div class="col-md-7 content-itinerary">
+      <?php echo get_field('itinerary_body'); ?>
+
+      <?php /*<ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-bottom:10px;">
       <li class="nav-item">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Itinerary</a>
       </li>
@@ -106,8 +118,13 @@ get_header(); ?>
         </div>
 
       </div>
-      </div>
+      </div> */ ?>
 
+    </div>
+
+    <div class="col-md-5 term">
+      <?php echo get_field('price'); ?>
+      <?php echo get_field('term-condition'); ?>
     </div>
   </div>
 </div>
