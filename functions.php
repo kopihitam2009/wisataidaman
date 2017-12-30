@@ -86,7 +86,7 @@ function programs() {
 	  'public' => true,
 		'has_archive' => true,
 	  'menu_position' => 20,
-	  'supports' => array( 'title' ),
+	  'supports' => array( 'title', 'editor' ),
 		'taxonomies' => array( 'category' ),
 	));
 }

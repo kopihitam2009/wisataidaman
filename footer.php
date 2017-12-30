@@ -48,7 +48,7 @@
           <h5>Goto Appearrance -> Menu to set this menu</h5>
         <?php endif; ?>
         <br>
-        
+
         <h5 class="mt-3 mb-1">Follow Us</h5>
         <ul class="social-media">
           <?php if(!empty(get_option('wisataidaman_fb_link'))) : ?>
@@ -77,10 +77,10 @@
       <span class="float-left">&copy; <?php echo date("Y"); ?> <?php echo get_option('wisataidaman_cpname') ?></span>
       <span class="float-right">
         <?php if(!empty(get_option('wisataidaman_privacy'))) : ?>
-          <a class="pt-link" href="<?php echo get_option('wisataidaman_privacy')?>">Privacy Policy</a>
+          <a class="pt-link" href="<?php the_permalink(get_option('wisataidaman_privacy')); ?>">Privacy Policy</a>
         <?php endif; ?>
         <?php if(!empty(get_option('wisataidaman_term'))) : ?>
-          <a class="pt-link" href="<?php echo get_option('wisataidaman_term')?>">Terms of Use</a>
+          <a class="pt-link" href="<?php the_permalink(get_option('wisataidaman_term')); ?>">Terms of Use</a>
         <?php endif; ?>
     </div>
   </div>
