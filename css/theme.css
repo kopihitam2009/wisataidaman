@@ -335,6 +335,7 @@ hr.w {
 .content-itinerary > ul > li > ul > li {
   margin-left: 20px;
   padding-left: 10px;
+  font-size: 14px;
 }
 
 .content-itinerary > ul > li > ul > li:first-child {
