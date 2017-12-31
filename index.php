@@ -30,10 +30,10 @@
          <?php while ( $umroh->have_posts() ) :$umroh->the_post(); ?>
            <div class="col-md-4 card-program card-<?php the_ID(); ?>">
              <div class="card shadow">
-               <a class="card-link" href="#"><img class="card-img-top" src="<?php the_field('thumbnail'); ?>" alt="image" /></a>
+               <a class="card-link" href="<?php the_permalink(); ?>"><img class="card-img-top" src="<?php the_field('thumbnail'); ?>" alt="image" /></a>
                <div class="card-body">
                  <div class="d-flex justify-content-between">
-                   <div class="title-program"><a href="#"><?php echo mb_strimwidth( get_the_title(), 0, 20, '...' );  ?></a></div>
+                   <div class="title-program"><a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth( get_the_title(), 0, 20, '...' );  ?></a></div>
                    <div class="lp-program"><?php the_field('lowest_price'); ?></div>
                 </div>
                  <span class="add-info"><?php the_field('duration'); ?> | <i class="fa fa-plane" aria-hidden="true"></i> <?php the_field('flight'); ?></span>
