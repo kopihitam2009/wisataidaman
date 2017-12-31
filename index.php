@@ -97,7 +97,7 @@
                     <?php endif; ?>
 
                     <h5 class="text-center"><?php the_field('name'); ?></h5>
-                    <p class="text-center mx-auto" style="width:80%"><?php the_field('body') ?></p>
+                    <div style="width:80%;text-align:center;margin:0 auto;"><?php the_field('body') ?></div>
                   </div>
                 <?php endwhile; ?>
 
