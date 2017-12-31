@@ -14,7 +14,7 @@
    </head>
    <body>
      <div class="container-fluid">
-       <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light bg-nav">
          <div class="container">
            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/logo-wisata-idaman.png" width="80%" /></a>
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
