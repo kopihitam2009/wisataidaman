@@ -29,12 +29,12 @@ get_header(); ?>
 <div class="container-fluid mb-4 pt-3 pb-3 info-bar">
   <div class="row">
     <div class="col-md-3 border-right">
+      <h5 class="text-center">Keberangkatan</h5>
       <?php if(get_field('depature')) : ?>
-        <h5 class="text-center">Keberangkatan</h5>
-        <?php
-          $date = new DateTime(get_field('depature', false, false));
-          echo '<p class="text-center">' . $date->format('j M Y') . '</p>';
-        ?>
+        <?php $date = new DateTime(get_field('depature', false, false));
+          echo '<p class="text-center">' . $date->format('j M Y') . '</p>'; ?>
+      <?php else : ?>
+          <p class="text-center">Call us</p>
       <?php endif; ?>
 
     </div>
