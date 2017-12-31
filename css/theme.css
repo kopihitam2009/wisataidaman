@@ -142,14 +142,11 @@ hr.w {
   margin-bottom: 20px;
 }
 
-
-.title-program {
-  font-size: 22px;
-  font-weight: bold;
-}
-
 .title-program a {
   color: inherit;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .lp-program {
