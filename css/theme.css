@@ -334,6 +334,11 @@ hr.w {
 
 .content-itinerary > ul > li > ul > li {
   margin-left: 20px;
+  padding-left: 10px;
+}
+
+.content-itinerary > ul > li > ul > li:first-child {
+  padding-left: 0;
 }
 
 .content-itinerary > ul > li > ul > li > h4 {
