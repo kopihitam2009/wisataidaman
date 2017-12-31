@@ -65,12 +65,13 @@ get_header(); ?>
     <div class="col-md-7 content-itinerary">
       <?php echo get_field('itinerary_body'); ?>
 
+
       <?php if(get_field('media')) : ?>
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="<?php echo get_field('media'); ?>" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo substr(get_field('media'), -11); ?>" allowfullscreen></iframe>
       </div>
       <?php endif; ?>
-      
+
     </div>
 
     <div class="col-md-5 term">
