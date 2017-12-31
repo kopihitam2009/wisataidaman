@@ -9,7 +9,7 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <?php if(get_field('page_banner')) : ?>
-  <div class="container-fluid pl-0 pr-0" style="background: url('<?php the_field('page_banner'); ?>') top center no-repeat;height:300px;">
+  <div class="container-fluid" style="background: url('<?php the_field('page_banner'); ?>') top center no-repeat;height:300px;">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 class="text-center title-program-with-images"><?php the_title(); ?></h2>
