@@ -51,7 +51,7 @@
      <div class="bg-why mt-5 pt-5 pb-5">
        <div class="container">
          <div class="row">
-           <div class="col-md-12"><h3 class="text-center mb-4">Mengapa memilih <strong>Wisata Idaman</strong></h3></div>
+           <div class="col-md-12"><h3 class="text-center mb-4">Why <strong>Global Wisata Idaman</strong></h3></div>
          </div>
          <div class="row">
 
