@@ -148,6 +148,10 @@ hr.w {
   font-weight: bold;
 }
 
+.title-program a {
+  color: inherit;
+}
+
 .lp-program {
   font-size: 16px;
   font-weight: bold;
