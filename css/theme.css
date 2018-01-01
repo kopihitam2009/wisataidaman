@@ -34,7 +34,7 @@ body {
 }
 
 .navbar-nav .active {
-  background: #171d33;
+  background: #2f306e;
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
@@ -406,5 +406,5 @@ hr.w {
 }
 
 .card-link {
-  /*background: #333;*/
+  background: #ffffff;
 }

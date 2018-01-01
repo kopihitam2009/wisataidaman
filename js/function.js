@@ -1,16 +1,72 @@
-$(document).ready(function() {
-  $(".slider").bxSlider({
-    adaptiveHeight: true,
-    touchEnabled: false,
-    auto: true,
-  });
+$(".slider").bxSlider({
+  adaptiveHeight: true,
+  touchEnabled: false,
+  auto: true,
+});
 
-  $(".card-link").on("mouseover mouseout", "img", function(e) {
-    if(e.type === "mouseover") {
-      console.log("Mouse Over");
-      $(this).fadeTo("fast", 0.8);
-    } else {
-      $(this).fadeTo("fast", 1);
-    }
+// $(".program-thumb")
+// .mouseenter(function() {
+//   $(this).animate({
+//     opacity: "0.85",
+//     width: "100.5%",
+//     margin: "-1px 0 0 -1px"
+//   }, 400);
+// })
+// .mouseleave(function() {
+//   $(this).animate({ 
+//     opacity:"1",
+//     width: "100%",
+//     margin: "0"
+//   }, 400);
+// })
+
+let ch = $(".card").height();
+
+let a = $("<a class=\"box\" href=\"#\"></a>");
+a.css({
+  "width":"100%",
+  "height":ch,
+  "background":"rgba(67, 68, 155,.9)",
+  "position":"absolute",
+  "top":"0",
+  "left":"0",
+  "display":"none"
+});
+
+const div = $("<div></div>");
+div.css({
+  "text-align":"center",
+  "margin-top":"25%"
+});
+
+const icon = $("<i class=\"fa fa-search\" aria-hidden=\"true\"></i>");
+icon.css({
+  "color":"rgb(240, 240, 240)",
+  "font-size":"28px",
+})
+
+const p = $("<p>View Program</p>");
+p.css({
+  "color":"rgb(240, 240, 240)",
+  "text-decoration":"none",
+  "margin-top":"5px"
+});
+
+$(div).append(icon,p);
+$(a).append(div);
+$(".card").prepend(a);
+
+$(".card")
+.mouseenter(function() {
+  $(this).children("a[class=\"box\"]").bind("click", function(e) {
+    let url = $(this).next().attr("href");
+    console.log(url);
+    location.href = url;
+    e.preventDefault();
   });
+  $(this).children("a[class=\"box\"]").fadeIn(200);
+  
+})
+.mouseleave(function() {
+  $(this).children("a[class=\"box\"]").fadeOut(150);
 });
