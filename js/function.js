@@ -4,22 +4,6 @@ $(".slider").bxSlider({
   auto: true,
 });
 
-// $(".program-thumb")
-// .mouseenter(function() {
-//   $(this).animate({
-//     opacity: "0.85",
-//     width: "100.5%",
-//     margin: "-1px 0 0 -1px"
-//   }, 400);
-// })
-// .mouseleave(function() {
-//   $(this).animate({ 
-//     opacity:"1",
-//     width: "100%",
-//     margin: "0"
-//   }, 400);
-// })
-
 let ch = $(".card").height();
 
 let a = $("<a class=\"box\" href=\"#\"></a>");
