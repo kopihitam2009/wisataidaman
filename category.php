@@ -16,18 +16,18 @@
     <div class="row" style="padding:0 5px 0 5px;">
       <?php while ( $arg->have_posts() ) : $arg->the_post(); ?>
 
-        <div class="col-md-4 card-program">
-          <div class="card shadow">
-            <a href="<?php the_permalink();?>"><img class="card-img-top" src="<?php the_field('thumbnail'); ?>" alt="image" /></a>
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <div class="title-program"><?php the_title(); ?></div>
-                <div class="lp-program"><?php the_field('lowest_price'); ?></div>
-             </div>
-              <span class="add-info"><?php the_field('duration'); ?> | <i class="fa fa-plane" aria-hidden="true"></i> <?php the_field('flight'); ?></span>
-            </div>
-          </div>
+      <div class="col-md-4 card-program card-<?php the_ID(); ?>">
+      <div class="card shadow">
+        <img class="card-img-top program-thumb" src="<?php the_field('thumbnail'); ?>" alt="<?php the_title();  ?>" data="<?php echo get_permalink();  ?>" />
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <div class="title-program"><?php echo mb_strimwidth( get_the_title(), 0, 20, '...' );  ?></div>
+            <div class="lp-program"><?php the_field('lowest_price'); ?></div>
          </div>
+          <span class="add-info"><?php the_field('duration'); ?> | <i class="fa fa-plane" aria-hidden="true"></i> <?php the_field('flight'); ?></span>
+        </div>
+      </div>
+     </div>
 
 
       <?php endwhile; ?>
