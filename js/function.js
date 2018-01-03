@@ -47,7 +47,7 @@ $(document).ready(function() {
     let ch = $(this).height();
     $(this).children("a[class=\"box\"]").css("height", ch);
     $(this).children("a[class=\"box\"]").bind("click", function(e) {
-      //goToPage($(this).next().attr("data"));
+      goToPage($(this).next().attr("data"));
       e.preventDefault();
     });
     $(this).children("a[class=\"box\"]").fadeIn(200);  
