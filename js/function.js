@@ -10,7 +10,6 @@ $(document).ready(function() {
   let a = $("<a class=\"box\" href=\"#\"></a>");
   a.css({
     "width":"100%",
-    // "height":ch,
     "background":"rgba(67, 68, 155,.9)",
     "position":"absolute",
     "top":"0",
@@ -58,7 +57,6 @@ $(document).ready(function() {
 
   $("body").click(function(e) {
     let el = $(e.target);
-    console.log(el);
     if(el.is("img")) {
       if(el.parent().is("a[class=\"navbar-brand\"]")) {
         goToPage(el.parent().attr("href"))
@@ -79,6 +77,10 @@ $(document).ready(function() {
     } else if(el.is("span")) {
       if(el.parent().is("a[class=\"more-link\"]")) {
         goToPage(el.parent().attr("href"));
+      }
+    } else {
+      if(el.parent().is("div[class*=\"testimoni\"] p")) {
+        window.open(el.attr("href"),"_blank");
       }
     }
     e.preventDefault();
