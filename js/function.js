@@ -58,9 +58,11 @@ $(document).ready(function() {
 
   $("body").click(function(e) {
     let el = $(e.target);
-    if( el.is("img") ) {
-      // console.log(el.parent().attr("href"));
-      goToPage(el.parent().attr("href"))
+    console.log(el);
+    if(el.is("img")) {
+      if(el.parent().is("a[class=\"navbar-brand\"]")) {
+        goToPage(el.parent().attr("href"))
+      }
     } else if(el.is("a[class=\"nav-link\"]") || el.is("a[class=\"pt-link\"]")) {
       let url = el.attr("href");
       if(url === "#"){
@@ -69,8 +71,15 @@ $(document).ready(function() {
         goToPage(url);
       }
     } else if(el.is("a[class=\"medsos\"]")) {
-      console.log(el.attr("href"));
       window.open(el.attr("href"),"_blank");
+    } else if(el.is("i[class*=\"fa\"]")) {
+      if(el.parent().is("a[class=\"medsos\"]")) {
+        window.open(el.parent().attr("href"),"_blank");
+      }
+    } else if(el.is("span")) {
+      if(el.parent().is("a[class=\"more-link\"]")) {
+        goToPage(el.parent().attr("href"));
+      }
     }
     e.preventDefault();
   });
