@@ -1,6 +1,5 @@
-$( document ).ready(function() {
-
-  document.getElementsByTagName("html")[0].style.visibility = "visible";
+$(document).ready(function() {
+  $("html").css("visibility", "visible")
 
   $(".slider").bxSlider({
     adaptiveHeight: true,
@@ -47,16 +46,43 @@ $( document ).ready(function() {
   $(".card")
   .mouseenter(function() {
     $(this).children("a[class=\"box\"]").bind("click", function(e) {
-      let url = $(this).next().attr("data");
-      console.log(url);
-      location.href = url;
+      // let url = $(this).next().attr("data");
+      goToPage($(this).next().attr("data"));
       e.preventDefault();
     });
-    $(this).children("a[class=\"box\"]").fadeIn(200);
-    
+    $(this).children("a[class=\"box\"]").fadeIn(200);  
   })
   .mouseleave(function() {
     $(this).children("a[class=\"box\"]").fadeOut(150);
   });
 
+  $("body").click(function(e) {
+    let el = $(e.target);
+    if( el.is("img") ) {
+      // console.log(el.parent().attr("href"));
+      goToPage(el.parent().attr("href"))
+    } else if(el.is("a[class=\"nav-link\"]") || el.is("a[class=\"pt-link\"]")) {
+      let url = el.attr("href");
+      if(url === "#"){
+        console.log("url not found");
+      } else {
+        goToPage(url);
+      }
+    } else if(el.is("a[class=\"medsos\"]")) {
+      console.log(el.attr("href"));
+      window.open(el.attr("href"),"_blank");
+    }
+    e.preventDefault();
+  });
+
+  function goToPage(url) {
+    $(".app").fadeIn(300, function() {
+      location.href=url
+    });
+  }
+
+  // Tetap dibawah
+  $(".app").children().delay(1000).fadeOut(300, function() {
+    $(this).parent().fadeOut(400);
+  });
 });

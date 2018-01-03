@@ -409,3 +409,18 @@ hr.w {
 .card-link {
   background: #ffffff;
 }
+
+.app {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1500;
+  padding: 100px 0 0 100px;
+  color: #43449b;
+  text-transform: uppercase;
+  font-weight: bold;
+}

@@ -13,7 +13,11 @@
      <?php wp_head(); ?>
    </head>
    <body>
-     <div class="container-fluid app">
+      <div class="app">
+        <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+     <div class="container-fluid">
        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light bg-nav">
          <div class="container">
            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/logo-wisata-idaman.png" width="80%" /></a>

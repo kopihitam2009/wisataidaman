@@ -52,22 +52,22 @@
         <h5 class="mt-3 mb-1">Follow Us</h5>
         <ul class="social-media">
           <?php if(!empty(get_option('wisataidaman_fb_link'))) : ?>
-            <li><a href="<?php echo get_option('wisataidaman_fb_link') ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+            <li><a class="medsos" href="<?php echo get_option('wisataidaman_fb_link') ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
           <?php endif; ?>
           <?php if(!empty(get_option('wisataidaman_li_link'))) : ?>
-            <li><a href="<?php echo get_option('wisataidaman_li_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a class="medsos" href="<?php echo get_option('wisataidaman_li_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
           <?php endif; ?>
           <?php if(!empty(get_option('wisataidaman_gp_link'))) : ?>
-            <li><a href="<?php echo get_option('wisataidaman_gp_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a class="medsos" href="<?php echo get_option('wisataidaman_gp_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
           <?php endif; ?>
           <?php if(!empty(get_option('wisataidaman_ig_link'))) : ?>
-            <li><a href="<?php echo get_option('wisataidaman_ig_link') ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a class="medsos" href="<?php echo get_option('wisataidaman_ig_link') ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
           <?php endif; ?>
           <?php if(!empty(get_option('wisataidaman_yt_link'))) : ?>
-            <li><a href="<?php echo get_option('wisataidaman_yt_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a class="medsos" href="<?php echo get_option('wisataidaman_yt_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
           <?php endif; ?>
           <?php if(!empty(get_option('wisataidaman_tw_link'))) : ?>
-            <li><a href="<?php echo get_option('wisataidaman_tw_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a class="medsos" href="<?php echo get_option('wisataidaman_tw_link') ?>" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
           <?php endif; ?>
         </ul>
       </div>
