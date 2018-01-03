@@ -7,11 +7,10 @@ $(document).ready(function() {
     auto: true,
   });
 
-  let ch = $(".card").height();
   let a = $("<a class=\"box\" href=\"#\"></a>");
   a.css({
     "width":"100%",
-    "height":ch,
+    // "height":ch,
     "background":"rgba(67, 68, 155,.9)",
     "position":"absolute",
     "top":"0",
@@ -45,9 +44,10 @@ $(document).ready(function() {
 
   $(".card")
   .mouseenter(function() {
+    let ch = $(this).height();
+    $(this).children("a[class=\"box\"]").css("height", ch);
     $(this).children("a[class=\"box\"]").bind("click", function(e) {
-      // let url = $(this).next().attr("data");
-      goToPage($(this).next().attr("data"));
+      //goToPage($(this).next().attr("data"));
       e.preventDefault();
     });
     $(this).children("a[class=\"box\"]").fadeIn(200);  
