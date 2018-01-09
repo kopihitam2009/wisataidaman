@@ -46,7 +46,7 @@ $(document).ready(function() {
     let ch = $(this).height();
     $(this).children("a[class=\"box\"]").css("height", ch);
     $(this).children("a[class=\"box\"]").bind("click", function(e) {
-      goToPage($(this).next().attr("data"));
+      location.href= $(this).next().attr("href");
       e.preventDefault();
     });
     $(this).children("a[class=\"box\"]").fadeIn(200);  
@@ -55,47 +55,4 @@ $(document).ready(function() {
     $(this).children("a[class=\"box\"]").fadeOut(150);
   });
 
-  $("body").click(function(e) {
-    let el = $(e.target);
-    if(el.is("img")) {
-      if(el.parent().is("a[class=\"navbar-brand\"]")) {
-        goToPage(el.parent().attr("href"))
-      }
-    } else if(el.is("a[class=\"nav-link\"]") || el.is("a[class=\"pt-link\"]") || el.parent().is("ul[class=\"bottom-nav\"] li")) {
-      let url = el.attr("href");
-      if(url === "#"){
-        console.log("url not found");
-      } else {
-        goToPage(url);
-      }
-    } else if(el.is("a[class=\"medsos\"]")) {
-      window.open(el.attr("href"),"_blank");
-    } else if(el.is("i[class*=\"fa\"]")) {
-      if(el.parent().is("a[class=\"medsos\"]")) {
-        window.open(el.parent().attr("href"),"_blank");
-      }
-    } else if(el.is("span")) {
-      if(el.parent().is("a[class=\"more-link\"]")) {
-        goToPage(el.parent().attr("href"));
-      }
-    } else if(el.parent().is("div[class*=\"sidebar\"] section ul li")) {
-      goToPage(url);
-    } else {
-      if(el.parent().is("div[class*=\"testimoni\"] p")) {
-        window.open(el.attr("href"),"_blank");
-      }
-    }
-    e.preventDefault();
-  });
-
-  function goToPage(url) {
-    $(".app").fadeIn(300, function() {
-      location.href=url
-    });
-  }
-
-  // Tetap dibawah
-  $(".app").children().delay(1000).fadeOut(300, function() {
-    $(this).parent().fadeOut(400);
-  });
 });

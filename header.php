@@ -14,10 +14,7 @@
    </head>
    <body>
      <!-- Header section -->
-      <div class="app">
-        <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-        <span class="sr-only">Loading...</span>
-      </div>
+      
      <div class="container-fluid">
        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light bg-nav">
          <div class="container">
