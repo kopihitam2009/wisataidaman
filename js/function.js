@@ -61,7 +61,7 @@ $(document).ready(function() {
       if(el.parent().is("a[class=\"navbar-brand\"]")) {
         goToPage(el.parent().attr("href"))
       }
-    } else if(el.is("a[class=\"nav-link\"]") || el.is("a[class=\"pt-link\"]") || el.parent().is("ul[class=\"bottom-nav\"] li") || el.is("a")) {
+    } else if(el.is("a[class=\"nav-link\"]") || el.is("a[class=\"pt-link\"]") || el.parent().is("ul[class=\"bottom-nav\"] li")) {
       let url = el.attr("href");
       if(url === "#"){
         console.log("url not found");
@@ -78,6 +78,8 @@ $(document).ready(function() {
       if(el.parent().is("a[class=\"more-link\"]")) {
         goToPage(el.parent().attr("href"));
       }
+    } else if(el.parent().is("div[class*=\"sidebar\"] section ul li")) {
+      goToPage(url);
     } else {
       if(el.parent().is("div[class*=\"testimoni\"] p")) {
         window.open(el.attr("href"),"_blank");
