@@ -2,7 +2,7 @@
 
 <?php $cat = get_queried_object(); ?>
 
-<div class="container-fluid page-wrapper pt-5 pb-4 mb-5">
+<div class="container-fluid page-title page-wrapper pt-5 pb-4 mb-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
       <h2 class="text-center mb-4"><?php echo $cat->cat_name ?></h2>

@@ -12,7 +12,7 @@ add_action( 'admin_menu', 'wisataidaman_setting_theme_page' );
 
 function register_wisataidaman_settings() {
   if ( count($_POST) > 0 && isset($_POST['wisataidaman_theme_settings']) ) {
-		$options = array ('cpname', 'cpnote', 'cpaddress', 'email', 'phone', 'mobile', 'privacy', 'term', 'fb_link', 'li_link', 'gp_link', 'ig_link', 'yt_link', 'tw_link', 'ppp');
+		$options = array ('cpname', 'cpnote', 'cpaddress', 'email', 'phone', 'mobile', 'privacy', 'term', 'fb_link', 'li_link', 'gp_link', 'ig_link', 'yt_link', 'tw_link', 'ppp', 'img-why');
 		foreach ( $options as $opt ) {
 			delete_option ( 'wisataidaman_'.$opt, $_POST[$opt] );
 			add_option ( 'wisataidaman_'.$opt, $_POST[$opt] );
@@ -62,6 +62,7 @@ function wisataidaman_setting_page(){
   <h1>Web options <small>custom for Global Wisata Idaman</small></h1>
 
   <form method="post" novalidate="novalidate">
+    <h2>General Info</h2>
     <table class="form-table">
       <tbody>
         <tr>
@@ -88,14 +89,11 @@ function wisataidaman_setting_page(){
           <th><label for="exampleInputEmail1">Mobile / Whatsapp</label></th>
           <td><input size="60" type="text" name="mobile" id="mobile" value="<?php echo get_option('wisataidaman_mobile'); ?>" class="form-control"></td>
         </tr>
-        <tr>
-          <th><label for="exampleInputEmail1">Privacy Page</label></th>
-          <td><?php wp_dropdown_pages("name=privacy&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('wisataidaman_privacy')); ?></td>
-        </tr>
-        <tr>
-          <th><label for="exampleInputEmail1">Term Page</label></th>
-          <td><?php wp_dropdown_pages("name=term&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('wisataidaman_term')); ?></td>
-        </tr>
+      </tbody>
+    </table>
+    <h2>Social media</h2>
+    <table class="form-table">
+      <tbody>
         <tr>
           <th><label for="exampleInputEmail1">Facebook</label></th>
           <td><input size="60" type="text" name="fb_link" id="fb_link" value="<?php echo get_option('wisataidaman_fb_link'); ?>" class="form-control"></td>
@@ -120,9 +118,26 @@ function wisataidaman_setting_page(){
           <th><label for="exampleInputEmail1">Twitter</label></th>
           <td><input size="60" type="text" name="tw_link" id="tw_link" value="<?php echo get_option('wisataidaman_tw_link'); ?>" class="form-control"></td>
         </tr>
+      </tbody>
+    </table>
+    <h2>Site Setting's</h2>
+    <table class="form-table">
+      <tbody>
+        <tr>
+          <th><label for="exampleInputEmail1">Privacy Page</label></th>
+          <td><?php wp_dropdown_pages("name=privacy&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('wisataidaman_privacy')); ?></td>
+        </tr>
+        <tr>
+          <th><label for="exampleInputEmail1">Term Page</label></th>
+          <td><?php wp_dropdown_pages("name=term&hide_empty=0&show_option_none=".__('- Select -')."&selected=" .get_option('wisataidaman_term')); ?></td>
+        </tr>
         <tr>
           <th><label for="exampleInputEmail1">Post per page <strong>Home</strong></label></th>
           <td><input size="10" type="text" name="ppp" id="ppp" value="<?php echo get_option('wisataidaman_ppp'); ?>" class="form-control"></td>
+        </tr>
+        <tr>
+          <th><label for="exampleInputEmail1">Background Why <strong>Home</strong></label></th>
+          <td><input size="60" type="text" name="img-why" id="img-why" value="<?php echo get_option('wisataidaman_img-why'); ?>" class="form-control"></td>
         </tr>
         <!--
         <tr>

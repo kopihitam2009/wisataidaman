@@ -48,7 +48,7 @@
 
      <?php $soup = new WP_Query( array( 'post_type' => 'superiorities', 'posts_per_page' => 4, 'order' => 'asc' ) ); ?>
      <?php if ( $soup->have_posts() ) : ?>
-     <div class="bg-why mt-5 pt-5 pb-5">
+     <div class="bg-why mt-5 pt-5 pb-5" <?php echo get_option('wisataidaman_img-why') ? 'style="background: url(' . get_option('wisataidaman_img-why') . ') center top no-repeat;"' : 'style="color:#fff;"' ?>>
        <div class="container">
          <div class="row">
            <div class="col-md-12"><h3 class="text-center mb-4">Why <strong>Global Wisata Idaman</strong></h3></div>
@@ -97,7 +97,7 @@
                     <?php endif; ?>
 
                     <h5 class="text-center"><?php the_field('name'); ?></h5>
-                    <div class="testimoni" style="width:80%;text-align:center;margin:0 auto;"><?php the_field('body') ?></div>
+                    <div class="testimoni-body text-center mx-auto"><?php the_field('body') ?></div>
                   </div>
                 <?php endwhile; ?>
 
@@ -120,7 +120,7 @@
 
     <?php $blog = new WP_Query( array( 'category_name' => 'blog', 'posts_per_page' => 2, 'order' => 'asc' ) ); ?>
     <?php if ( $blog->have_posts() ) : ?>
-      <div class="bottom-content pt-5 pb-4">
+      <div class="blog pt-5 pb-4">
         <div class="container">
           <div class="row">
             <div class="col-md-12 mb-4">
@@ -130,11 +130,12 @@
         <div class="row justify-content-md-center">
           <?php while ( $blog->have_posts() ) :$blog->the_post(); ?>
             <div class="col-md-5">
-              <div class="media blog">
-              <?php  if ( has_post_thumbnail() ) {
-                  the_post_thumbnail();
-              } ?>
-              <img class="mr-3 blog-thumb shadow" src="<?php echo has_post_thumbnail() ? esc_url(get_the_post_thumbnail_url(get_the_ID(),'full')) : get_template_directory_uri() . '/images/default-thumb.jpg' ; ?>">
+              <div class="media">
+                <?php if(has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail([80,80], ['class' => 'mr-3 blog-thumb shadow']); ?>
+                <?php else : ?>
+                  <img class="mr-3 blog-thumb shadow" src="<?php echo get_template_directory_uri() . '/images/default-thumb.jpg'; ?>">
+                <?php endif; ?>
 
                 <div class="media-body">
                   <h5 class="mt-0 mb-0"><?php the_title(); ?></h5>

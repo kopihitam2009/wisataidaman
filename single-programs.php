@@ -9,7 +9,7 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <?php if(get_field('page_banner')) : ?>
-  <div class="container-fluid" style="background: url('<?php the_field('page_banner'); ?>') top center no-repeat;height:300px;">
+  <div class="container-fluid page-title" style="background: url('<?php the_field('page_banner'); ?>') top center no-repeat;height:300px;">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 class="text-center title-program-with-images"><?php the_title(); ?></h2>
@@ -17,7 +17,7 @@ get_header(); ?>
     </div>
   </div>
 <?php else : ?>
-  <div class="container-fluid page-wrapper pt-5 pb-4">
+  <div class="container-fluid page-title page-wrapper pt-5 pb-4">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 class="text-center mb-4"><?php the_title(); ?></h2>
@@ -60,11 +60,9 @@ get_header(); ?>
 </div>
 
 <div class="container content">
-
   <div class="row">
     <div class="col-md-7 content-itinerary">
       <?php echo get_field('itinerary_body'); ?>
-
 
       <?php if(get_field('media')) : ?>
       <div class="embed-responsive embed-responsive-16by9">
