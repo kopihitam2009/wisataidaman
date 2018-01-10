@@ -18,7 +18,7 @@
 
       <div class="col-md-4 card-program card-<?php the_ID(); ?>">
       <div class="card shadow">
-        <img class="card-img-top program-thumb" src="<?php the_field('thumbnail'); ?>" alt="<?php the_title();  ?>" data="<?php echo get_permalink();  ?>" />
+        <a href="<?php the_permalink(); ?>"><img class="card-img-top program-thumb" src="<?php the_field('thumbnail'); ?>" alt="<?php the_title();  ?>" data="<?php echo get_permalink();  ?>" /></a>
         <div class="card-body">
           <div class="d-flex justify-content-between">
             <div class="title-program"><?php echo mb_strimwidth( get_the_title(), 0, 20, '...' );  ?></div>
