@@ -61,7 +61,7 @@ get_header(); ?>
 
 <div class="container content">
   <div class="row">
-    <div class="col-md-7 content-itinerary">
+    <div class="col-md-7 content-itin">
       <?php echo get_field('itinerary_body'); ?>
 
       <?php if(get_field('media')) : ?>
@@ -72,7 +72,7 @@ get_header(); ?>
 
     </div>
 
-    <div class="col-md-5 term">
+    <div class="col-md-5 content-term">
       <?php echo get_field('price'); ?>
       <?php echo get_field('term-condition'); ?>
     </div>

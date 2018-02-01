@@ -268,26 +268,26 @@ Program section
   margin-bottom: 15px;
 }
 
-.content-itinerary,
-.term {
+.content-itin,
+.content-term {
   font-size: 14px;
 }
-.content-itinerary > ul,
-.content-itinerary > ul > li > ul,
-.term > ul {
+.content-itin > ul,
+.content-itin > ul > li > ul,
+.content-term > ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   width: 100%;
 }
 
-.content-itinerary > ul > li {
+.content-itin > ul > li {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
 }
 
-.content-itinerary > ul > li > h4 {
+.content-itin > ul > li > h4 {
   padding-left: 0;
   text-align: center;
   width: 18%;
@@ -295,32 +295,32 @@ Program section
   margin-right: 15px;
 }
 
-.content-itinerary > ul > li > ul > li,
-.content-itinerary > ul > li > ul > li > p {
+.content-itin > ul > li > ul > li,
+.content-itin > ul > li > ul > li > p {
   padding-left: 10px;
   margin-bottom: 0;
 }
 
-.content-itinerary > ul > li > ul > li:first-child {
+.content-itin > ul > li > ul > li:first-child {
   padding-left: 0;
 }
 
-.content-itinerary > ul > li > ul > li > h4 {
+.content-itin > ul > li > ul > li > h4 {
   display: block;
   width: 100%;
 }
 
-.term > ul > li {
+.content-term > ul > li {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.term > ul > li > h4 {
+.content-term > ul > li > h4 {
   display: block;
   width: 100%;
 }
 
-.term > ul > li > ul {
+.content-term > ul > li > ul {
   margin: 0 0 0 25px;
   padding: 0;
   list-style-type: square;
@@ -375,8 +375,8 @@ Global section
   margin-bottom: 30px;
 }
 
-.content-itinerary h4,
-.term h4,
+.content-itin h4,
+.content-term h4,
 .sidebar h4 {
   background: #f7f7f7;
   color: #595959;
