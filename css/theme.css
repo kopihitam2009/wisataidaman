@@ -272,22 +272,22 @@ Program section
 .content-term {
   font-size: 14px;
 }
-.content-itin > ul,
-.content-itin > ul > li > ul,
-.content-term > ul {
+.content-itin ul,
+.content-itin ul li ul,
+.content-term ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   width: 100%;
 }
 
-.content-itin > ul > li {
+.content-itin ul li {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
 }
 
-.content-itin > ul > li > h4 {
+.content-itin ul li h4 {
   padding-left: 0;
   text-align: center;
   width: 18%;
@@ -295,33 +295,33 @@ Program section
   margin-right: 15px;
 }
 
-.content-itin > ul > li > ul > li,
-.content-itin > ul > li > ul > li > p {
+.content-itin ul li ul li,
+.content-itin ul li ul li p {
   padding-left: 10px;
   margin-bottom: 0;
 }
 
-.content-itin > ul > li > ul > li:first-child {
+.content-itin ul li ul li:first-child {
   padding-left: 0;
 }
 
-.content-itin > ul > li > ul > li > h4 {
+.content-itin ul li ul li h5 {
   display: block;
   width: 100%;
 }
 
-.content-term > ul > li {
+.content-term ul li {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
-.content-term > ul > li > h4 {
+.content-term ul li h4 {
   display: block;
   width: 100%;
 }
 
-.content-term > ul > li > ul {
-  margin: 0 0 0 25px;
+.content-term ul li ul {
+  margin: 0 0 25px 25px;
   padding: 0;
   list-style-type: square;
 }
@@ -376,6 +376,7 @@ Global section
 }
 
 .content-itin h4,
+.content-itin h5,
 .content-term h4,
 .sidebar h4 {
   background: #f7f7f7;
